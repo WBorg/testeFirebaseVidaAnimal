@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "testevidaanimall",
+    "slug": "testevidaanimall",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
