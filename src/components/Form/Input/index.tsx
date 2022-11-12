@@ -1,5 +1,5 @@
 import { TextInputProps } from 'react-native'
-import { Container, Label } from './styles'
+import { Container } from './styles'
 
 type Props = TextInputProps
 

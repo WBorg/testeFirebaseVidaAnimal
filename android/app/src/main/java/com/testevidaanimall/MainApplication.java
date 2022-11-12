@@ -1,5 +1,8 @@
 package com.testevidaanimall;
 
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
+
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -63,6 +66,16 @@ public class MainApplication extends Application implements ReactApplication {
     super.onConfigurationChanged(newConfig);
     ApplicationLifecycleDispatcher.onConfigurationChanged(this, newConfig);
   }
+
+  protected List<ReactPackage> getPackages() {
+          @SuppressWarnings("UnnecessaryLocalVariable")
+          List<ReactPackage> packages = new PackageList(this).getPackages();
+          // Packages that cannot be autolinked yet can be added manually here, for example:
+          ...
+         packages.add(new RNFirebaseMessagingPackage());
+         packages.add(new RNFirebaseNotificationsPackage());
+         return packages;
+    }
 
   /**
    * Loads Flipper in React Native templates. Call this in the onCreate method with something like
